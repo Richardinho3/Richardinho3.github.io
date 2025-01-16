@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber_Doba</title>
+    <link rel="stylesheet" href="https://api.ssps.cajthaml.eu/file/64d9f18f79dad891e8a07c73">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <!--https://pickcoloronline.com/-->
+    <!--https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing-->
+    <!--https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient-->
+    <!--change color of svg in html and css
+    ChatGPT řekl:
+    ChatGPT
+    To change the color of an SVG in HTML and CSS, you can use several methods depending on whether the SVG is inline or an external file. Here's a quick guide:
+
+    1. For Inline SVG
+    If the SVG code is directly in your HTML, you can use CSS to target the fill or stroke attributes.
+
+    Example:
+    html
+    Zkopírovat kód
+    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100" class="icon">
+    <circle cx="50" cy="50" r="40" fill="red"></circle>
+    </svg>
+
+    <style>
+    .icon {
+        fill: blue; /* Changes the color of the SVG fill */
+    }
+
+    /* Optional: Change stroke color */
+    .icon circle {
+        stroke: black;
+        stroke-width: 2;
+    }
+    </style>-->
+    <!--fontawesome.com-->
+    <!--https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp-->
+
+    <style>
+        body {
+            font-family: "Inter", serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+
+            display:flex;
+            background-color: #0d1117;
+            color:#7a888f;
+            box-sizing:border-box;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            overflow-x: hidden;
+            
+}
+        #topHeader {
+            display:flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width:100vw;
+            background-color: #161b22;
+            gap:30px;
+            flex-wrap: wrap;
+        }
+        nav {
+            display:flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap:50px;
+        }
+        #joinButton {
+            color:white;
+            background-color: #238636;
+            margin:10px;
+            padding:15px;
+        }
+        #corpLogo {
+            margin-right:50px;
+            color: #58a6ff;
+            font-size: 35px;
+            font-weight: 700;
+            
+        }
+        #corpImage {
+            width:50px;
+            height:auto;
+            
+            /*transform scale mi rozbijel vysku */
+            
+        }
+        #logoContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap:10px;
+        }
+
+        main {
+            box-sizing: border-box;
+            display:flex;
+            flex-direction: column;
+            
+            justify-content: center;
+            align-items: center;
+            width:60vw;
+            max-width:1080px;
+            /*pridan max-width, na nav je pridan flex wrap*/
+            min-height:auto;
+            background-color: #14181f;
+            color: #a7b7b7;
+
+            border-left: 20px solid #111318;
+            border-right: 20px solid #111318;
+            min-height: 100%;
+            
+        }
+
+        #mainNav > p{
+            width:100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            height:auto;
+            padding:20px;
+        }
+
+        
+        #mainNav > p:nth-child(1) {
+            background-color:#23272f ;
+        }
+        #mainNav > p:nth-child(2) {
+            background-color:#2c3139 ;
+        }
+        #mainNav > p:nth-child(3) {
+            background-color:#343b44 ;
+        }
+        #mainNav > p:nth-child(4) {
+            background-color:#3b434b ;
+        }
+
+        #mainNav {
+            display: flex;
+            flex-direction: row; 
+            justify-content: space-between; 
+            align-items: center; 
+            width: 100%; 
+            height: auto; 
+            gap: 0; 
+        }
+        #backgroundImage {
+            width:100%;
+        }
+        #addedInfo {
+            width:100%;
+            border-bottom: 3px solid #111318;
+            display:flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            padding:15px;
+            margin-right: 15px;
+        }
+        #textTitle {
+            color:#58a6ff;
+            font-size:40px;
+            font-weight:700;
+            padding-top: 50px;
+            padding-bottom: 10px;
+
+            
+            letter-spacing: 3px;
+            text-align: center;
+            width:100%;
+            
+            
+        
+        }
+        hr { 
+            width:20%;
+            border-color: #7a888f;
+             
+        }
+        #mainText {
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap:10px;
+
+            width: 100%; 
+            box-sizing: border-box;
+            font-size: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+            text-align: center;
+            line-height: 1.5;
+
+        
+            
+        }
+
+        #allPanels {
+            display:flex;
+            flex-direction:row;
+            justify-content: center;
+            align-items: center;
+            width:100%;
+            
+            background-color:#161b22;
+        }
+        #infoPanels {
+            width:100%;
+
+            display:flex;
+            flex-direction:row;
+            justify-content: center;
+            align-items: center;
+            background-color: #161b22;
+            flex-grow: 1;
+            margin-top: 30px;
+            margin-bottom: 30px;
+
+        }
+        #infoPanels > section {
+            display:flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            border: 3px solid green;
+            margin-left:5px;
+            margin-right:5px;
+            text-align: center;
+            height:200px;
+            width:80%;
+            padding-left: 20px;
+            padding-right: 20px;
+            box-sizing: border-box;
+
+
+        }
+        #infoPanels > section:nth-child(1){
+            margin-left: 60px;
+        }
+        #infoPanels > section:nth-child(4){
+            margin-right: 60px;
+        }
+        svg{
+            box-sizing: border-box;
+            width:25%;
+            height:auto;
+            padding:10px;
+            border: 2px solid black;
+            border-radius: 50%;
+            margin-top:15px;
+            margin-bottom: 5px;
+            scale: 1.3;
+            
+        }
+        #infoPanels > section:nth-child(2n){
+            color:green;
+            border:3px solid green;
+        }
+        #infoPanels > section:nth-child(2n+1){
+            color:#58a6ff;
+            border:3px solid #58a6ff;
+        }
+
+        #infoPanels > section:nth-child(2n) > svg{
+            color:green;
+            border:2px solid green;
+            fill:green;
+        }
+        #infoPanels > section:nth-child(2n+1) > svg{
+            color:#58a6ff;
+            border:2px solid #58a6ff;
+            fill:#58a6ff;
+        }
+        h3{
+            font-weight:800;
+            margin-bottom: 15px;
+        }
+        #infoPanels > section >p{
+            margin-bottom: 20px;
+        }
+        #allText {
+            margin-bottom: 50px;
+        }
+        #quoteContainer {
+            box-sizing: border-box;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items:center;
+            width:100%;
+            
+            
+            
+
+        }
+        #quote {
+            color:#58a6ff;
+            font-size: 22px;
+            font-weight: 600;
+            margin-top:30px;
+            margin-bottom: 30px;
+
+        }        
+        span {
+            font-size: 40px;
+            margin-left:10px;
+            margin-right:10px;
+        }
+        #quoteInfo {
+            margin-bottom:40px;
+            padding-left: 350px;
+        }
+
+        footer {
+            width:100%;
+            background-color: #0d1117;
+            background: linear-gradient(to top, #0d1117 90%, #161b22 )
+            
+            
+            
+            
+        }
+        #footerContainer {
+            box-sizing: border-box;
+            display:flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start;
+            line-height: 1.5;
+            margin-left:50px;
+            margin-right: 50px;
+            margin-top:50px;
+            gap:50px;
+            margin-bottom: 50px;
+            height:100%;
+            mix-blend-mode: difference;
+            
+            
+            
+            
+            
+            
+
+        }
+        #aboutUs {
+            flex-grow: 2;
+            width:250px;
+            height:auto;
+            
+
+
+        }
+        #contact {
+            flex-grow: 1;
+            width:200px;
+            height:auto;
+
+        }
+        #contact > p{
+            margin-bottom:5px;
+        }
+        #information
+        {
+            flex-grow: 1;
+            width:200px;
+            height:auto;
+
+        }
+        #information > h5 {
+            margin-bottom: 10px;
+        }
+
+
+        h4, h5 {
+            color:#c5d0d8;
+            font-weight: 600;
+
+
+        }
+
+        h4 {
+            font-size:20px;
+            margin-bottom:20px;
+        }
+
+        @media (max-width: 1200px) {
+            #footerContainer {
+                flex-direction: column;
+                align-items: center;
+                gap: 50px;
+            }
+            #infoPanels {
+                flex-direction: column;
+                gap:30px;
+            }
+            
+        @media (max-width: 800px) {
+            main {
+                width:80vw;
+            }
+            #quoteInfo {
+                padding-left: 0px;
+            }
+            #mainNav {
+                
+                flex-direction: column;
+            }
+        }
+        
+            
+        }
+        @media (max-width: 500px) {
+            h2 {
+                font-size: 25px;
+            }
+            main {
+                width: 100vw;
+            }
+            
+            
+            
+        }
+        #topNavigation {
+            flex-wrap: wrap;
+        }
+        
+
+        
+    </style>
+</head>
+<body>
+    <header id = "topHeader">
+        <div id = "logoContainer">
+            <img src="https://api.ssps.cajthaml.eu/file/674091dc91831b4e06c6f65c" alt="Cyber Corp Logo" id="corpImage">
+            <div id = "corpLogo">
+                <h1>CyberCorp</h1>
+            </div>
+        </div>
+        <nav id = "topNavigation">
+            <div><p>Zprávy z podsvětí</p></div>
+            <div><p>Kybernetika</p></div>
+            <div><p>Hackerská elita</p></div>
+            <div><p>Často hackované otázky</p></div>
+        </nav>
+        <div id = "joinButton">PŘIPOJIT SE</div>
+    </header>
+    <main>
+        <nav id = "mainNav">
+            <p>PŘEŽITÍ</p>
+            <p>KYBERZBRANĚ</p>
+            <p>SÍŤOVÉ VÁLKY</p>
+            <p>DIGITÁLNÍ UTOPIE</p>
+        </nav>
+        <img src="https://api.ssps.cajthaml.eu/file/6740920a91831b4e06c6fb1a" alt="Cyber Corp Background" id = "backgroundImage">
+        <div id = "addedInfo"><p>2126 © CyberCorp - Všechna práva zašifrována</p></div>
+        <article id = "allText">
+            <section id = "textTitle">
+                <h2>DIGITÁLNÍ NOC</h2>
+                <hr id = "topDivider">
+            </section>
+            <div id = "mainText">
+                
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate amet incidunt quae obcaecati eligendi nemo accusamus commodi, alias quos odio.</p>
+                
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate amet incidunt quae obcaecati eligendi nemo accusamus commodi, alias quos odio.</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate amet incidunt quae obcaecati eligendi nemo accusamus commodi, alias quos odio.</p>
+            </div>
+
+        </article>
+        <div id = "allPanels">
+            <article id = "infoPanels">
+                
+                    <section>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M320 0c17.7 0 32 14.3 32 32l0 64 120 0c39.8 0 72 32.2 72 72l0 272c0 39.8-32.2 72-72 72l-304 0c-39.8 0-72-32.2-72-72l0-272c0-39.8 32.2-72 72-72l120 0 0-64c0-17.7 14.3-32 32-32zM208 384c-8.8 0-16 7.2-16 16s7.2 16 16 16l32 0c8.8 0 16-7.2 16-16s-7.2-16-16-16l-32 0zm96 0c-8.8 0-16 7.2-16 16s7.2 16 16 16l32 0c8.8 0 16-7.2 16-16s-7.2-16-16-16l-32 0zm96 0c-8.8 0-16 7.2-16 16s7.2 16 16 16l32 0c8.8 0 16-7.2 16-16s-7.2-16-16-16l-32 0zM264 256a40 40 0 1 0 -80 0 40 40 0 1 0 80 0zm152 40a40 40 0 1 0 0-80 40 40 0 1 0 0 80zM48 224l16 0 0 192-16 0c-26.5 0-48-21.5-48-48l0-96c0-26.5 21.5-48 48-48zm544 0c26.5 0 48 21.5 48 48l0 96c0 26.5-21.5 48-48 48l-16 0 0-192 16 0z"/></svg>
+                        <i class="fa-solid fa-robot"></i>
+                        <h3>AI ROZVOJ</h3>
+                        <p>Kyberumělci posouvají hranice krativity ve spojení s umělou inteligencí.</p>
+                    </section>
+                    <section>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M336 352c97.2 0 176-78.8 176-176S433.2 0 336 0S160 78.8 160 176c0 18.7 2.9 36.8 8.3 53.7L7 391c-4.5 4.5-7 10.6-7 17l0 80c0 13.3 10.7 24 24 24l80 0c13.3 0 24-10.7 24-24l0-40 40 0c13.3 0 24-10.7 24-24l0-40 40 0c6.4 0 12.5-2.5 17-7l33.3-33.3c16.9 5.4 35 8.3 53.7 8.3zM376 96a40 40 0 1 1 0 80 40 40 0 1 1 0-80z"/></svg>
+                        <h3>BEZPEČNOST</h3>
+                        <p>Data jsou měnou. Vaše soukromí? Iluze v rukou megakorporací.</p>
+                    </section>
+                    <section>  
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M118.6 80c-11.5 0-21.4 7.9-24 19.1L57 260.3c20.5-6.2 48.3-12.3 78.7-12.3c32.3 0 61.8 6.9 82.8 13.5c10.6 3.3 19.3 6.7 25.4 9.2c3.1 1.3 5.5 2.4 7.3 3.2c.9 .4 1.6 .7 2.1 1l.6 .3 .2 .1c0 0 .1 0 .1 0c0 0 0 0 0 0s0 0 0 0L247.9 288s0 0 0 0l6.3-12.7c5.8 2.9 10.4 7.3 13.5 12.7l40.6 0c3.1-5.3 7.7-9.8 13.5-12.7l6.3 12.7s0 0 0 0c-6.3-12.7-6.3-12.7-6.3-12.7s0 0 0 0s0 0 0 0c0 0 .1 0 .1 0l.2-.1 .6-.3c.5-.2 1.2-.6 2.1-1c1.8-.8 4.2-1.9 7.3-3.2c6.1-2.6 14.8-5.9 25.4-9.2c21-6.6 50.4-13.5 82.8-13.5c30.4 0 58.2 6.1 78.7 12.3L481.4 99.1c-2.6-11.2-12.6-19.1-24-19.1c-3.1 0-6.2 .6-9.2 1.8L416.9 94.3c-12.3 4.9-26.3-1.1-31.2-13.4s1.1-26.3 13.4-31.2l31.3-12.5c8.6-3.4 17.7-5.2 27-5.2c33.8 0 63.1 23.3 70.8 56.2l43.9 188c1.7 7.3 2.9 14.7 3.5 22.1c.3 1.9 .5 3.8 .5 5.7l0 6.7 0 41.3 0 16c0 61.9-50.1 112-112 112l-44.3 0c-59.4 0-108.5-46.4-111.8-105.8L306.6 352l-37.2 0-1.2 22.2C264.9 433.6 215.8 480 156.3 480L112 480C50.1 480 0 429.9 0 368l0-16 0-41.3L0 304c0-1.9 .2-3.8 .5-5.7c.6-7.4 1.8-14.8 3.5-22.1l43.9-188C55.5 55.3 84.8 32 118.6 32c9.2 0 18.4 1.8 27 5.2l31.3 12.5c12.3 4.9 18.3 18.9 13.4 31.2s-18.9 18.3-31.2 13.4L127.8 81.8c-2.9-1.2-6-1.8-9.2-1.8zM64 325.4L64 368c0 26.5 21.5 48 48 48l44.3 0c25.5 0 46.5-19.9 47.9-45.3l2.5-45.6c-2.3-.8-4.9-1.7-7.5-2.5c-17.2-5.4-39.9-10.5-63.6-10.5c-23.7 0-46.2 5.1-63.2 10.5c-3.1 1-5.9 1.9-8.5 2.9zM512 368l0-42.6c-2.6-.9-5.5-1.9-8.5-2.9c-17-5.4-39.5-10.5-63.2-10.5c-23.7 0-46.4 5.1-63.6 10.5c-2.7 .8-5.2 1.7-7.5 2.5l2.5 45.6c1.4 25.4 22.5 45.3 47.9 45.3l44.3 0c26.5 0 48-21.5 48-48z"/></svg>
+                        <h3>BUDOUCNOST</h3>
+                        <p>Nová éra ačíná ve virtuálním světě - realita ztrácí význam.</p>
+                    </section>
+                    <section>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M256 64l128 0 0 64-128 0 0-64zM240 0c-26.5 0-48 21.5-48 48l0 96c0 26.5 21.5 48 48 48l48 0 0 32L32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l96 0 0 32-48 0c-26.5 0-48 21.5-48 48l0 96c0 26.5 21.5 48 48 48l160 0c26.5 0 48-21.5 48-48l0-96c0-26.5-21.5-48-48-48l-48 0 0-32 256 0 0 32-48 0c-26.5 0-48 21.5-48 48l0 96c0 26.5 21.5 48 48 48l160 0c26.5 0 48-21.5 48-48l0-96c0-26.5-21.5-48-48-48l-48 0 0-32 96 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-256 0 0-32 48 0c26.5 0 48-21.5 48-48l0-96c0-26.5-21.5-48-48-48L240 0zM96 448l0-64 128 0 0 64L96 448zm320-64l128 0 0 64-128 0 0-64z"/></svg>
+                        <h3>KYBERSÍTĚ</h3>
+                        <p>Připojte se. Buďte součástí boje za svobodu na darknetu.</p>
+                    </section>
+                
+                </article>
+            </div>
+            <div id = "quoteContainer">
+                <div id = "quote">
+                    <p><span>„</span>Všechno je data. Nezáleží na tom, co je skutečné. <span>”</span></p>
+                </div>
+                <div id = "quoteInfo">
+                    <p>- CyberProphet</p>
+                </div>
+            </div>
+            <footer>
+                <article id = "footerContainer">
+                    <section id = "aboutUs">
+                        <h4>O nás</h4>
+                        <p>CyberCorp je největší síťová komunita, která propojuje mysl a budoucnost.</p>
+                    </section>
+                    <section id = "contact">
+                        <h4>Kontakt</h4>
+                        <p>info@cybercorp.net</p>
+                        <p>+420 666 666 666</p>
+                    </section>
+                    <section id = "information">
+                        <h4>Informace</h4>
+                        <h5>PODPORA</h5>
+                        <h5>TECHNOLOGIE</h5>
+                        <h5>HACKERSKÁ AKADEMIE</h5>
+                        <p>2126 © CyberCorp</p>
+                    </section>
+                </article>
+            </footer>
+    </main>
+</body>
+</html>
